@@ -10,15 +10,11 @@ import com.study.mybatis.mapper.RecommendUserMapper;
 import com.study.mybatis.pojo.RecommendUser;
 
 public class RecommendUserDaoImpl implements IRecommendUserDao {
-	
-	private SqlSessionFactory readOnlySessionFactory;
-	
 	private SqlSessionFactory sqlSessionFactory;
 
 	
-	public RecommendUserDaoImpl(SqlSessionFactory readOnlySessionFactory, SqlSessionFactory sqlSessionFactory) {
+	public RecommendUserDaoImpl(SqlSessionFactory sqlSessionFactory) {
 		super();
-		this.readOnlySessionFactory = readOnlySessionFactory;
 		this.sqlSessionFactory = sqlSessionFactory;
 	}
 

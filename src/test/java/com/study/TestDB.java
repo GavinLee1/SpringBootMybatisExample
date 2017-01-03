@@ -21,6 +21,6 @@ public class TestDB {
 	}
 	
 	public void main(String[] args) {
-		DaoManager daoManager = new DaoManager(h2DataSource(),h2DataSource());
+		DaoManager daoManager = new DaoManager(h2DataSource());
 	}
 }

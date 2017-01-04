@@ -44,15 +44,15 @@ public class ResponseWrapper<T> {
 		this.message = message;
 		this.response = response;
 	}
-	
+
 	public static ResponseWrapper ERROR_RESPONSE(String error_msg) {
 		return new ResponseWrapper<>(false, error_msg, null);
 	}
-	
+
 	public static ResponseWrapper ERROR_RESPONSE() {
 		return new ResponseWrapper<>(false, ErrorMsg.DEFAULT_DB_ERROR, null);
 	}
-	
+
 	public static ResponseWrapper OK_RESPONSE() {
 		return new ResponseWrapper<>(true, "ok", null);
 	}

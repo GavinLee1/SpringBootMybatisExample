@@ -4,12 +4,14 @@ import javax.sql.DataSource;
 
 //import org.apache.commons.configuration.BaseConfiguration;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.study.mybatis.dao.IRecommendUserDao;
 import com.study.mybatis.impl.RecommendUserDaoImpl;
 import com.study.mybatis.util.MybatisSessionUtil;
 
+@Component
 public class DaoManager {
 
 	private SqlSessionFactory sessionFactory;

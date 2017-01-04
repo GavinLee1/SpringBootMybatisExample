@@ -28,8 +28,10 @@ public class ConfigLoader extends BaseConfiguration {
 	
 	public void reload() {
 		try {
+			//TODO:Rememeber this method 
 			clear();
 			Map<String, Object> map = new HashMap<>();
+			//TODO:Rememeber this method 
 			loadFileProperties("system.properties", map);
 			
 			/*Add all the stuff to the internal property map.*/
@@ -39,10 +41,10 @@ public class ConfigLoader extends BaseConfiguration {
 			
 			/*Log all the entries*/
 			log.info("Final configuration: ");
-			Iterator<String> keys = getKeys();
+			Iterator<String> keys = getKeys();//TODO:Rememeber this method 
 			while(keys.hasNext()) {
 				String key = keys.next();
-				Object value = getProperty(key);
+				Object value = getProperty(key);//TODO:Rememeber this method 
 				
 				log.info("Final Config - " + key + " : " + value);
 			}
@@ -56,11 +58,14 @@ public class ConfigLoader extends BaseConfiguration {
 	
 	private void loadFileProperties(String fileName, Map<String, Object> map) {
 		try {
+			//TODO:Rememeber this method 
 			ClassLoader classLoader = getClass().getClassLoader();
+			//TODO:Rememeber this method 
 			URL url = classLoader.getResource(fileName);
 			
 			if(url != null) {
 				log.info("Found Config file: " + url);
+				//TODO:Rememeber this method 
 				Configuration conf = new PropertiesConfiguration(fileName);
 				Iterator<String> keys = conf.getKeys();
 				

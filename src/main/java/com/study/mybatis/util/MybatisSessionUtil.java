@@ -18,6 +18,7 @@ public class MybatisSessionUtil {
 
 		Configuration configuration = new Configuration(environment);
 
+		//TODO:Remember all mappers should register here.
 		configuration.addMapper(RecommendUserMapper.class);
 
 		SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(configuration);

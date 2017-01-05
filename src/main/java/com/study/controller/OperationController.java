@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.study.mybatis.pojo.RecommendUser;
@@ -29,4 +31,21 @@ public class OperationController {
 		
 		return operationService.getRecommendUserList();
 	}
+	
+	@ApiOperation(value = "Delete a user by id")
+	@RequestMapping(value = "/recommend/user/delete", method = RequestMethod.POST)
+	@ResponseBody
+	public ResponseWrapper deleteRecommendUser(@RequestParam int userId) {
+		
+		return operationService.deleteRecommendUser(userId);
+	}
+	
+	@ApiOperation(value = "Insert a list of recommend users")
+	@RequestMapping(value = "/recommend/user/update", method = RequestMethod.POST)
+	@ResponseBody
+	public ResponseWrapper deleteRecommendUser(@RequestBody List<RecommendUser> userList) {
+		
+		return operationService.updateRecommendUsers(userList);
+	}
+	
 }

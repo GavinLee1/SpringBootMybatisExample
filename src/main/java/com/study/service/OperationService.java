@@ -48,4 +48,29 @@ public class OperationService {
 		return response;
 	}
 
+	public ResponseWrapper deleteRecommendUser(int userId) {
+		ResponseWrapper response;
+		try {
+			recommendUserDao.delete(userId);
+			response = ResponseWrapper.OK_RESPONSE();
+		} catch (Exception e) {
+			log.error("Fail on delete recommend user [{ }]", userId, e);
+			response = ResponseWrapper.ERROR_RESPONSE();
+		}
+		return response;
+	}
+
+	public ResponseWrapper updateRecommendUsers(List<RecommendUser> userList) {
+		ResponseWrapper response;
+		try {
+			recommendUserDao.updateBatch(userList);
+			response = ResponseWrapper.OK_RESPONSE();
+		} catch (Exception e) {
+			log.error("Fail on update user list ", e);
+			response = ResponseWrapper.ERROR_RESPONSE();
+		}
+
+		return response;
+	}
+
 }

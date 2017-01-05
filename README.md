@@ -102,5 +102,25 @@
 </dependency>
 ```
 
-####3.  
+####3.引入Swagger Test API
+* 编写了`SwaggerConfig.java`来配置相关属性  
+* 用`@Configuration @EnableSwagger2`让这个配置类自动装载  
+* 在`Controller`中直接进行使用  
+* 可以用`@ApiOperation(value = "Get all recommended user's list")`来解释某个方法的作用，这句话会出现在界面上  
+* 所需引入的Depend的Dependency  
+```  
+	<dependency>
+		<groupId>io.springfox</groupId>
+		<artifactId>springfox-swagger-ui</artifactId>
+		<version>${swagger.version}</version>
+		<scope>compile</scope>
+	</dependency>
+
+	<dependency>  
+		<groupId>io.springfox</groupId>
+		<artifactId>springfox-swagger2</artifactId>		<version>${swagger.version}</version>
+		<scope>compile</scope>
+	</dependency>  
+```  
+* 然后就可以通过`http://localhost:8080/swagger-ui.html`访问了
 				

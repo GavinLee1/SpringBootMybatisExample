@@ -122,5 +122,14 @@
 		<scope>compile</scope>
 	</dependency>  
 ```  
-* 然后就可以通过`http://localhost:8080/swagger-ui.html`访问了
+* 然后就可以通过`http://localhost:8080/swagger-ui.html`访问了  
+  
+####4.编写了一个`ResponseWrapper`，在`Controller`和`Service`中通过调用这个工具类，将`Response`的消息进行格式化返回  
+  
+####5.用`Junit`编写测试类  
+* 用H2数据库来模拟真实数据，导入schema和scripts来建立这个数据库  
+* 为每个方法添加test cases  
+* 文件结构如下  
+![FileOrderForJunit](https://github.com/GavinLee1/SpringBootMybatisExample/blob/master/src/main/resources/FileOrderForTest.png)  
+
 				

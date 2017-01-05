@@ -1,4 +1,16 @@
-#SpringBootMybatisExample
+#SpringBootMybatisExample  
+This is a small demo project for myself to learn SpringBoot related knowledge. Like:  
+>**How to load resource files within Spring Boot?**  
+>**How to connect mysql database?**  
+>**How to integrate Mybatis?**  
+>**How to use Mybatis with annotations?**  
+>**How to use tomcat database connection pool?**  
+>**How to integrate Swagger test API?**  
+>**How to write reasonable Junit test cases?**  
+>**How to mock data when testing?**  
+>**How to organize Spring Boot project?**  
+  
+As well as Spring Boot contrllers and services. And other related technology and methodologies.  
 
 ##环境要求  
 - 确认已安装 Java 1.8 & maven & MySQL  

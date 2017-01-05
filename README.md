@@ -1,5 +1,13 @@
-"# SpringBootMybatisExample" 
+#SpringBootMybatisExample
 
+##环境要求  
+- 确认已安装 Java 1.8 & maven & MySQL  
+- 用`mvn clean install`拉去dependency的jar包  
+- 可以用Eclipse 或者 Intellij 直接导入已存在maven项目  
+- 需要连接本地数据库，且其中有test数据库和recommend_user表，具体请参考`test/resources/schema.sql`和`test/resources/test_data.sql`  
+
+##主要业务逻辑的类图  
+![BussinessClassDiagram](https://github.com/GavinLee1/SpringBootMybatisExample/blob/master/src/main/resources/BussinessClassDiagram.jpg)  
 
 ##主要知识点
 ####1.从resource文件导入资源  
